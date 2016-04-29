@@ -9,7 +9,8 @@ use autodie qw(:all);
 
 my $xmlFile = $ARGV[0];
 #my $xslFile = './plugins/mdipirro/xml-glossary/modules/glossaryLaTeX/alphabeticalOrder.xsl';
-my $xslFile = 'alphabeticalOrder.xsl';
+#my $xslFile = 'alphabeticalOrder.xsl';
+my $xslFile = $ARGV[1];
 my $orderedFile = $xmlFile;
 $orderedFile =~ s/.xml/Ordered.xml/;
 my $xslt = XML::LibXSLT->new();
